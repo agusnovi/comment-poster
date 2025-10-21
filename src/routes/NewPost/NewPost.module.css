@@ -29,7 +29,8 @@
 .actions {
   display: flex;
   justify-content: flex-end;
-  gap: 1px;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .actions button {
@@ -39,5 +40,11 @@
   border: none;
   border-radius: 4px;
   background-color: #34036c;
+  color: #e5d5f7;
+}
+
+.actions a {
+  background-color: transparent;
+  text-decoration: none;
   color: #e5d5f7;
 }
