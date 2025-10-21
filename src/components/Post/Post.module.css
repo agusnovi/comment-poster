@@ -1,0 +1,10 @@
+.box {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #9c7eee;
+}
+
+.label {
+  color: #543280;
+}
