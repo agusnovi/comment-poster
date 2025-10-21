@@ -1,0 +1,10 @@
+.details {
+    min-height: 100px;
+    width: 300px;
+    padding: 20px;
+    background-color: #6233b9;
+}
+
+.text {
+    color: white;
+}

@@ -11,7 +11,7 @@ export default function PostList() {
         {
             posts.length > 0 && (
                 <ul className={styles.ul}>
-                    { posts.map(post => (<Post key={post.id} author={post.author} body={post.body}/>)) }
+                    { posts.map(post => (<Post key={post.id} idPost={post.id} author={post.author} body={post.body}/>)) }
                 </ul>
             )
         }

@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client"
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
 
 import Posts, { fetchPosts } from "./routes/Posts"
+import Details, { fetchDetail } from "./routes/Details"
 import NewPost, { submitPost } from "./routes/NewPost"
 import RootLayout from "./routes/RootLayout"
 
@@ -12,16 +13,24 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
-    children: [{
-      path: '/',
-      element: <Posts />,
-      loader: fetchPosts,
-      children: [{
-        path: '/create-post',
-        element: <NewPost />,
-        action: submitPost
-      }]
-    }]
+    children: [
+      {
+        path: '/',
+        element: <Posts />,
+        loader: fetchPosts,
+        children: [
+          {
+            path: '/create-post',
+            element: <NewPost />,
+            action: submitPost
+          },{
+            path: ':id',
+            element: <Details />,
+            loader: fetchDetail
+          }
+        ]
+      }
+    ]
   }
 ])
 
